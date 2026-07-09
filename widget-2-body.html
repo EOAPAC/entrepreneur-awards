@@ -1,0 +1,594 @@
+<!-- ====================================================================
+     BADEN BOWER HOMEPAGE — WIDGET 2 of 2: BODY (everything after hero)
+     Paste this into the SECOND Elementor HTML widget, directly below the
+     hero widget. Carries its own copy of the shared <style> so it renders
+     correctly regardless of widget order.
+     Sections: dateline, definition, engines, outlet index, comparison,
+     method, press, guarantee, founder, FAQ, contact form.
+     ==================================================================== -->
+
+<style>
+/* =====================================================================
+   BADEN BOWER, HOMEPAGE, PRODUCTION BUILD OF THE APPROVED DESIGN
+   Design system v4 "Editorial Print". Scope prefix: #bbhp.
+   Shared stylesheet — kept identical in both the HERO and BODY widgets
+   so each widget is self-contained and order-independent in Elementor.
+   ===================================================================== */
+#bbhp{--navy:#0B1E3D;--gold:#C9A84C;--dgold:#7a6222;--cream:#F7F5F0;
+  --ink:#1B2A44;--grey:#5B6577;--hair:rgba(11,30,61,.28);
+  --serif:'Newsreader',Georgia,serif;--sans:'Radio Canada',system-ui,sans-serif}
+#bbhp *,#bbhp *::before,#bbhp *::after{box-sizing:border-box;margin:0;padding:0}
+#bbhp{font-family:var(--sans);color:var(--ink);background:var(--cream);line-height:1.6;font-size:16px;-webkit-font-smoothing:antialiased}
+#bbhp img{max-width:100%;display:block}
+#bbhp a{color:inherit;text-decoration:none}
+#bbhp .wrap{max-width:1200px;margin:0 auto;padding:0 40px}
+#bbhp a:focus-visible,#bbhp button:focus-visible,#bbhp input:focus-visible,#bbhp textarea:focus-visible,#bbhp summary:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+#bbhp .txtlink{color:var(--navy);font-weight:600;border-bottom:2px solid var(--gold)}
+
+/* Scotch rule kicker */
+#bbhp .kick{display:inline-block;min-width:220px;border-top:3px solid var(--navy);padding-top:2px}
+#bbhp .kick .thin{border-top:1px solid var(--navy);margin-bottom:14px}
+#bbhp .kick span{font-weight:700;font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--navy)}
+#bbhp .kick span b{color:var(--gold);font-weight:700}
+#bbhp .kick.onnavy{border-top-color:#fff}
+#bbhp .kick.onnavy .thin{border-top-color:rgba(255,255,255,.6)}
+#bbhp .kick.onnavy span{color:#fff}
+
+/* display type */
+#bbhp .h2{font-family:var(--serif);font-weight:600;font-size:clamp(28px,3.6vw,44px);line-height:1.1;color:var(--navy);margin:24px 0 0}
+
+/* letterpress buttons (all <a> or spans; never <button> for Elementor) */
+#bbhp .btn{display:inline-block;font-family:var(--sans);font-weight:700;font-size:15px;padding:16px 32px;border-radius:0;
+  background:var(--navy);color:#fff;box-shadow:4px 4px 0 var(--gold);cursor:pointer;border:none;
+  transition:transform 160ms ease,box-shadow 160ms ease}
+#bbhp .btn.alt{background:var(--cream);color:var(--navy)}
+#bbhp .btn:hover{transform:translate(3px,3px);box-shadow:1px 1px 0 var(--gold)}
+#bbhp .btn.ghost{background:transparent;color:#fff;border:1.5px solid #fff;box-shadow:none;padding:14.5px 30.5px;
+  transition:background 160ms ease,color 160ms ease}
+#bbhp .btn.ghost:hover{transform:none;background:#fff;color:var(--navy)}
+@media(prefers-reduced-motion:reduce){#bbhp .btn,#bbhp .btn.ghost{transition:none}#bbhp .btn:hover{transform:none}}
+
+/* registration-square list */
+#bbhp .marks{list-style:none;display:grid;gap:11px;font-size:15px;color:#E7ECF4}
+#bbhp .marks li{position:relative;padding-left:22px;line-height:1.5}
+#bbhp .marks li::before{content:'';position:absolute;left:0;top:.42em;width:9px;height:9px;background:var(--gold)}
+
+/* ============================ HERO ================================= */
+#bbhp .hero{position:relative;background:var(--navy);overflow:hidden}
+#bbhp .hero .bg{position:absolute;inset:0;background-size:cover;background-position:right center;
+  background-image:url('https://www.badenbower.com/wp-content/uploads/2026/04/Yahoo-Finance-Hero-Video-Fallback.jpg')}
+#bbhp .hero .ov{position:absolute;inset:0;
+  background:linear-gradient(95deg,rgba(11,30,61,.98) 0%,rgba(11,30,61,.94) 38%,rgba(11,30,61,.66) 62%,rgba(11,30,61,.32) 100%)}
+#bbhp .hero .inner{position:relative;max-width:1200px;margin:0 auto;padding:100px 40px 110px}
+#bbhp .hero .copy{max-width:700px}
+#bbhp .hero h1{font-family:var(--serif);font-weight:600;font-size:clamp(38px,4.9vw,60px);line-height:1.05;letter-spacing:-0.015em;color:#fff;margin:26px 0 0}
+#bbhp .hero h1 em{font-style:italic;font-weight:500;color:var(--gold)}
+#bbhp .hero .sub{font-size:17.5px;line-height:1.6;color:rgba(255,255,255,.82);margin:22px 0 0}
+#bbhp .hero .ctas{display:flex;gap:18px;flex-wrap:wrap;margin-top:34px}
+/* the stamp: signature element, hero only */
+#bbhp .stamp{position:absolute;right:9%;top:96px;width:168px;height:168px;border:3px double var(--gold);border-radius:50%;
+  transform:rotate(-9deg);display:grid;place-items:center}
+#bbhp .stamp .in{width:140px;height:140px;border:1px solid var(--gold);border-radius:50%;display:grid;place-items:center;
+  text-align:center;font-weight:700;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);line-height:1.9}
+
+/* ============================ DATELINE ============================= */
+#bbhp .dateline{background:var(--cream);padding-top:48px}
+#bbhp .dateline .frame{border-top:3px solid var(--navy);padding-top:2px}
+#bbhp .dateline .thin{border-top:1px solid var(--navy)}
+#bbhp .dateline .row{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid var(--navy)}
+#bbhp .dl{padding:26px 22px;border-right:1px solid var(--hair)}
+#bbhp .dl:last-child{border-right:none}
+#bbhp .dl b{display:block;font-family:var(--serif);font-weight:600;font-size:34px;color:var(--navy);line-height:1}
+#bbhp .dl small{display:block;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--grey);margin-top:8px}
+
+/* ============================ DEFINITION =========================== */
+#bbhp .define{background:var(--cream)}
+#bbhp .define .inner{max-width:1200px;margin:0 auto;padding:92px 40px}
+#bbhp .define .p1{font-size:16.5px;line-height:1.65;color:var(--ink);margin:20px 0 0}
+#bbhp .define .p2{font-size:16px;line-height:1.62;color:var(--grey);margin:16px 0 0}
+
+/* ============================ ENGINES ============================== */
+#bbhp .engines{background:var(--cream)}
+#bbhp .engines .inner{max-width:1200px;margin:0 auto;padding:0 40px 92px}
+#bbhp .egrid{border:1.5px solid var(--navy);display:grid;grid-template-columns:1fr 1fr}
+#bbhp .eng{padding:42px 40px}
+#bbhp .eng.g{background:var(--navy);border-right:1px solid var(--hair)}
+#bbhp .eng.e{background:#fff}
+#bbhp .eng .lab{font-weight:700;font-size:11px;letter-spacing:.2em;text-transform:uppercase}
+#bbhp .eng.g .lab{color:var(--gold)}
+#bbhp .eng.e .lab{color:var(--grey)}
+#bbhp .eng h3{font-family:var(--serif);font-weight:600;font-size:26px;margin:12px 0 0}
+#bbhp .eng.g h3{color:#fff}
+#bbhp .eng.e h3{color:var(--navy)}
+#bbhp .eng.g .marks{margin-top:22px}
+#bbhp .eng.e p{font-size:15.5px;line-height:1.62;margin:18px 0 0;color:var(--grey)}
+#bbhp .eng.e p + p{margin-top:14px;color:var(--ink)}
+
+/* ============================ INDEX ================================ */
+#bbhp .index{background:#fff;border-top:1px solid var(--hair);border-bottom:1px solid var(--hair)}
+#bbhp .index .inner{max-width:1200px;margin:0 auto;padding:92px 40px}
+#bbhp .igrid{border:1.5px solid var(--navy);display:grid;grid-template-columns:repeat(5,1fr);margin-top:34px;background:#fff}
+#bbhp .icel{min-height:96px;display:flex;align-items:center;justify-content:center;padding:12px 16px;text-align:center;color:var(--navy);
+  border-left:1px solid var(--hair);border-top:1px solid var(--hair);overflow:hidden}
+#bbhp .igrid .icel:nth-child(-n+5){border-top:none}
+#bbhp .igrid .icel:nth-child(5n+1){border-left:none}
+/* Logos: 44px base with the live site's per-logo scale factors (inline
+   transform) so every mark renders visually equal; each scaled logo is
+   width-capped at 100%/scale so wide wordmarks shrink to fit instead of
+   clipping. Natural colours, per Jezz/AJ direction July 2026. */
+#bbhp .icel img{transform-origin:center;max-height:44px;width:auto;max-width:100%;object-fit:contain}
+#bbhp .icel .nm,#bbhp .mast .nm{display:none;font-family:var(--serif);font-weight:600;font-size:17px;color:var(--navy)}
+#bbhp .icel.noimg .nm,#bbhp .mast.noimg .nm{display:block}
+#bbhp .nm-more{font-weight:600;font-size:14px;color:var(--grey)}
+/* masthead type treatments used by press fallback names */
+#bbhp .mast .nm-forbes{font-family:var(--serif);font-weight:700;font-size:22px}
+#bbhp .mast .nm-bi{font-family:var(--sans);font-weight:700;font-size:15px;letter-spacing:.04em}
+#bbhp .mast .nm-ent{font-family:var(--sans);font-weight:700;font-size:15px;letter-spacing:.06em}
+#bbhp .mast .nm-vf{font-family:var(--serif);font-style:italic;font-weight:600;font-size:20px}
+#bbhp .index .note{border-left:3px solid var(--gold);padding:4px 0 4px 16px;margin-top:22px;font-size:13.5px;color:var(--grey)}
+
+/* ============================ METHOD =============================== */
+#bbhp .method{background:var(--cream)}
+#bbhp .method .inner{max-width:1200px;margin:0 auto;padding:92px 40px}
+#bbhp .mgrid{display:grid;grid-template-columns:1fr 1.6fr;gap:60px;align-items:start}
+#bbhp .steps{list-style:none;border-top:1px solid var(--navy)}
+#bbhp .steps li{display:grid;grid-template-columns:72px 1fr;gap:22px;padding:24px 0;border-bottom:1px solid var(--hair)}
+#bbhp .steps li:last-child{border-bottom:1px solid var(--navy)}
+#bbhp .steps .n{font-family:var(--serif);font-style:italic;font-weight:600;font-size:30px;color:var(--dgold)}
+#bbhp .steps h3{font-family:var(--serif);font-weight:600;font-size:21px;color:var(--navy)}
+#bbhp .steps p{font-size:15px;line-height:1.6;color:var(--grey);margin:8px 0 0}
+
+/* ============================ GUARANTEE ============================ */
+#bbhp .guar{background:var(--navy)}
+#bbhp .guar .inner{max-width:1200px;margin:0 auto;padding:92px 40px}
+#bbhp .ggrid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+#bbhp .guar h2{font-family:var(--serif);font-weight:600;font-size:clamp(28px,3.6vw,44px);line-height:1.1;color:#fff;margin:24px 0 0}
+#bbhp .guar .lede{font-size:16px;line-height:1.62;color:rgba(255,255,255,.8);margin:18px 0 0}
+#bbhp .cert{border:1px solid rgba(255,255,255,.35);padding:6px}
+#bbhp .cert .in{border:1px solid rgba(201,168,76,.5);padding:34px 32px}
+#bbhp .cert .lab{font-weight:700;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold)}
+#bbhp .cert .marks{margin-top:18px}
+
+/* ============================ FAQ ================================== */
+#bbhp .faq{background:var(--cream)}
+#bbhp .faq .inner{max-width:1200px;margin:0 auto;padding:92px 40px}
+#bbhp .faq .h2{margin-bottom:34px}
+#bbhp .faq .list{border-top:1px solid var(--navy);border-bottom:1px solid var(--navy)}
+#bbhp .faq details{border-bottom:1px solid var(--hair)}
+#bbhp .faq details:last-of-type{border-bottom:none}
+#bbhp .faq summary{list-style:none;cursor:pointer;padding:20px 4px;display:flex;align-items:baseline;gap:14px}
+#bbhp .faq summary::-webkit-details-marker{display:none}
+#bbhp .faq .qn{font-family:var(--serif);font-style:italic;font-weight:600;font-size:18px;color:var(--dgold)}
+#bbhp .faq .qt{flex:1;font-family:var(--serif);font-weight:600;font-size:19px;color:var(--navy)}
+#bbhp .faq .plus{font-weight:700;font-size:18px;color:var(--gold)}
+#bbhp .faq .plus::before{content:'+'}
+#bbhp .faq details[open] .plus::before{content:'\2013'}
+#bbhp .faq .a{padding:0 4px 22px 46px;font-size:15.5px;color:var(--grey);line-height:1.62}
+#bbhp .faq .updated{font-style:italic;font-size:13px;color:var(--grey);margin:18px 0 0}
+
+/* ============================ CONTACT ============================== */
+#bbhp .contact{background:#fff;border-top:1px solid var(--hair)}
+#bbhp .contact .inner{max-width:1200px;margin:0 auto;padding:92px 40px}
+#bbhp .cgrid{display:grid;grid-template-columns:1.1fr 1fr;gap:60px;align-items:start}
+#bbhp .contact .lede{font-size:16px;line-height:1.62;color:var(--grey);margin:18px 0 0}
+#bbhp .contact .meta{display:grid;gap:10px;margin-top:26px;font-size:14px;color:var(--grey)}
+#bbhp .fcard{background:var(--cream);border-top:6px solid var(--gold);border-left:1px solid var(--hair);border-right:1px solid var(--hair);border-bottom:1px solid var(--hair);padding:32px}
+
+/* ============================ COMPARE ============================== */
+#bbhp .compare{background:var(--cream)}
+#bbhp .compare .inner{max-width:1200px;margin:0 auto;padding:92px 40px 0}
+#bbhp .tscroll{overflow-x:auto;-webkit-overflow-scrolling:touch;margin-top:34px;border:1.5px solid var(--navy)}
+#bbhp table.tbl{width:100%;border-collapse:collapse;min-width:760px;font-size:14.5px;background:#fff}
+#bbhp .tbl thead th{background:var(--navy);color:#fff;font-family:var(--sans);font-weight:600;font-size:13.5px;padding:16px 18px;text-align:center}
+#bbhp .tbl thead th:first-child{text-align:left}
+#bbhp .tbl thead th.rec{background:var(--gold);color:var(--navy);font-weight:700;border-left:1.5px solid var(--gold);border-right:1.5px solid var(--gold)}
+#bbhp .tbl thead th.rec img{height:28px;width:auto;max-width:150px;object-fit:contain;display:inline-block;vertical-align:middle}
+#bbhp .tbl thead th.rec .nm{display:none;font-family:var(--sans);font-weight:700;color:var(--navy)}
+#bbhp .tbl thead th.rec.noimg .nm{display:inline}
+#bbhp .tbl th,#bbhp .tbl td{padding:14px 18px;text-align:center;border-bottom:1px solid var(--hair);color:var(--grey)}
+#bbhp .tbl td:first-child{text-align:left;font-weight:500;color:var(--navy);width:28%}
+#bbhp .tbl td.rec{background:rgba(201,168,76,.16);font-weight:600;color:var(--navy);border-left:1.5px solid var(--gold);border-right:1.5px solid var(--gold)}
+#bbhp .tbl tbody tr:last-child td{border-bottom:none}
+#bbhp .tbl tbody tr:last-child td.rec{border-bottom:1.5px solid var(--gold)}
+
+/* ============================ PRESS ================================ */
+#bbhp .press{background:#fff;border-top:1px solid var(--hair);border-bottom:1px solid var(--hair)}
+#bbhp .press .inner{max-width:1200px;margin:0 auto;padding:92px 40px}
+#bbhp .pgrid{border:1.5px solid var(--navy);display:grid;grid-template-columns:repeat(4,1fr);margin-top:34px;background:#fff}
+#bbhp .pcell{padding:30px 28px;border-right:1px solid var(--hair);display:flex;flex-direction:column}
+#bbhp .pgrid .pcell:last-child{border-right:none}
+#bbhp .pcell .mast{color:var(--navy);height:30px;display:flex;align-items:center}
+#bbhp .pcell .mast img{transform-origin:left center;height:26px;width:auto;max-width:100%;object-fit:contain}
+#bbhp .pcell .q{font-size:14.5px;line-height:1.6;color:var(--grey);margin:16px 0 18px;padding-top:16px;border-top:1px solid var(--hair);flex-grow:1}
+#bbhp .pcell .go{font-size:13.5px}
+
+/* ============================ FOUNDER ============================== */
+#bbhp .founder{background:var(--cream)}
+#bbhp .founder .inner{max-width:1200px;margin:0 auto;padding:92px 40px 0}
+#bbhp .fpanel{border:1.5px solid var(--navy);background:#fff;position:relative;padding:0;display:grid;grid-template-columns:250px 1fr;overflow:hidden}
+#bbhp .fpanel::before{content:'';position:absolute;left:0;top:0;bottom:0;width:6px;background:var(--gold);z-index:1}
+#bbhp .fpic{position:relative;min-height:100%;border-right:1px solid var(--hair)}
+#bbhp .fpic img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+#bbhp .fbody{padding:40px 44px}
+#bbhp .fpanel blockquote{border:none !important;margin:0 !important;padding:0 !important;background:none !important;quotes:none;font-family:var(--serif);font-weight:500;font-style:italic;font-size:clamp(21px,2.4vw,27px);line-height:1.4;color:var(--navy)}
+#bbhp .fpanel blockquote::before,#bbhp .fpanel blockquote::after{content:none !important}
+#bbhp .fpanel .attr{margin-top:14px;font-size:14.5px;color:var(--grey)}
+#bbhp .fmeta{display:flex;flex-wrap:wrap;align-items:center;gap:14px 20px;margin-top:26px;padding-top:24px;border-top:1px solid var(--hair)}
+#bbhp .fwho{margin-right:auto}
+#bbhp .fname{font-family:var(--serif);font-weight:600;font-size:19px;color:var(--navy);line-height:1.2}
+#bbhp .frole{font-family:var(--sans);font-weight:700;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--dgold);margin-top:4px}
+#bbhp .fchips{display:flex;flex-wrap:wrap;gap:8px}
+#bbhp .fchip{font-family:var(--sans);font-weight:600;font-size:12px;color:var(--navy);border:1px solid var(--hair);padding:3px 10px}
+#bbhp .fli{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;
+  border:1.5px solid var(--navy);font-family:var(--sans);font-weight:700;font-size:13.5px;color:var(--navy);
+  transition:background 160ms ease,color 160ms ease}
+#bbhp .fli svg{fill:currentColor;flex:none}
+#bbhp .fli:hover{background:var(--navy);color:#fff}
+@media(prefers-reduced-motion:reduce){#bbhp .fli{transition:none}}
+
+/* ============================ RESPONSIVE =========================== */
+@media(max-width:1024px){
+  #bbhp .stamp{display:none}
+}
+@media(max-width:860px){
+  #bbhp .egrid,#bbhp .mgrid,#bbhp .ggrid,#bbhp .cgrid{grid-template-columns:1fr}
+  #bbhp .pgrid{grid-template-columns:1fr 1fr}
+  #bbhp .fpanel{grid-template-columns:1fr}
+  #bbhp .fpic{min-height:0;aspect-ratio:16/10;border-right:none;border-bottom:1px solid var(--hair)}
+  #bbhp .fbody{padding:28px 26px}
+  #bbhp .pcell{border-bottom:1px solid var(--hair)}
+  #bbhp .pcell:nth-child(2n){border-right:none}
+  #bbhp .pcell:nth-child(n+3){border-bottom:none}
+  #bbhp .eng.g{border-right:none;border-bottom:1px solid var(--hair)}
+  #bbhp .mgrid{gap:36px}
+  #bbhp .dateline .row{grid-template-columns:repeat(2,1fr)}
+  #bbhp .dl:nth-child(2){border-right:none}
+  #bbhp .dl:nth-child(-n+2){border-bottom:1px solid var(--hair)}
+  #bbhp .igrid{grid-template-columns:repeat(3,1fr)}
+  #bbhp .igrid .icel:nth-child(-n+5){border-top:1px solid var(--hair)}
+  #bbhp .igrid .icel:nth-child(-n+3){border-top:none}
+  #bbhp .igrid .icel:nth-child(5n+1){border-left:1px solid var(--hair)}
+  #bbhp .igrid .icel:nth-child(3n+1){border-left:none}
+}
+@media(max-width:640px){
+  #bbhp .wrap,#bbhp .hero .inner,#bbhp .define .inner,#bbhp .engines .inner,#bbhp .index .inner,#bbhp .method .inner,#bbhp .guar .inner,#bbhp .faq .inner,#bbhp .contact .inner,#bbhp .compare .inner,#bbhp .press .inner,#bbhp .founder .inner{padding-left:22px;padding-right:22px}
+  #bbhp .pgrid{grid-template-columns:1fr}
+  #bbhp .pcell{border-right:none}
+  #bbhp .pcell:nth-child(n+3){border-bottom:1px solid var(--hair)}
+  #bbhp .pcell:last-child{border-bottom:none}
+  #bbhp .fpanel{padding:32px 26px}
+  #bbhp .hero .inner{padding-top:64px;padding-bottom:64px}
+  #bbhp .hero .bg{opacity:.26;background-position:center}
+  #bbhp .hero .ctas .btn{width:100%;text-align:center}
+  #bbhp .dateline{padding-top:32px}
+  #bbhp .igrid{grid-template-columns:repeat(2,1fr)}
+  #bbhp .igrid .icel:nth-child(-n+3){border-top:1px solid var(--hair)}
+  #bbhp .igrid .icel:nth-child(-n+2){border-top:none}
+  #bbhp .igrid .icel:nth-child(3n+1){border-left:1px solid var(--hair)}
+  #bbhp .igrid .icel:nth-child(2n+1){border-left:none}
+  #bbhp .faq .a{padding-left:4px}
+}
+</style>
+
+<div id="bbhp">
+
+  <!-- ================= DATELINE ================= -->
+  <section class="dateline">
+    <div class="wrap">
+      <div class="frame">
+        <div class="thin"></div>
+        <div class="row">
+          <div class="dl"><b>3,548</b><small>Clients in 37 countries</small></div>
+          <div class="dl"><b>25,000+</b><small>Articles published</small></div>
+          <div class="dl"><b>700+</b><small>Outlets in the network</small></div>
+          <!-- Review figures are driven by the ProvenExpert shortcodes.
+               Elementor's HTML widget does not run shortcodes natively:
+               place this dateline in a context where do_shortcode runs
+               (as on existing BB pages). If [bb_review_count] outputs
+               its own plus sign, delete the literal + after it. -->
+          <div class="dl"><b>[bb_review_rating]/5</b><small>From [bb_review_count]+ reviews</small></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= DEFINITION LEAD ================= -->
+  <section class="define">
+    <div class="inner">
+      <div>
+        <div class="kick"><div class="thin"></div><span>What this is <b>&middot;</b> Baden Bower</span></div>
+        <h2 class="h2">What is guaranteed media placement?</h2>
+        <p class="p1">Guaranteed media placement is editorial PR with a contractual commitment: your story runs in a publication you approve before you pay, refunded if not. Baden Bower has run this model since 2018, publishing 25,000+ articles for 3,548 clients across <a class="txtlink" href="https://www.badenbower.com/get-on-forbes/">Forbes</a>, <a class="txtlink" href="https://www.badenbower.com/get-on-vogue/">Vogue</a>, Business Insider and 700+ outlets.</p>
+        <p class="p2">Most agencies sell hours. We sell outcomes. The difference is whether you have a Forbes article on launch day or a six month retainer and a folder of polite no-replies.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= TWO-PANEL ENGINES ================= -->
+  <section class="engines" id="engine">
+    <div class="inner">
+      <div class="egrid">
+        <div class="eng g">
+          <span class="lab">The guaranteed engine</span>
+          <h3>You approve the outlet before any work begins</h3>
+          <ul class="marks">
+            <li>Named outlets, agreed in writing, no substitutions</li>
+            <li>Editorial-grade drafts in the outlet's house voice</li>
+            <li>Refunded if the article does not run</li>
+          </ul>
+        </div>
+        <div class="eng e">
+          <span class="lab">Why it matters now</span>
+          <h3>AI engines answer with cited sources</h3>
+          <p>ChatGPT, Perplexity and Gemini quote editorial coverage when they answer buyer questions. If you are not cited, you are not in the answer. Cited speakers get booked. The rest get a polite no-reply.</p>
+          <p>Every placement is server-rendered, crawlable and permanent: an asset the engines keep finding long after the invoice.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= OUTLET INDEX ================= -->
+  <section class="index" id="outlets">
+    <div class="inner">
+      <div class="kick"><div class="thin"></div><span>The index <b>&middot;</b> 700+ outlets</span></div>
+      <h2 class="h2">Which publications can you guarantee?</h2>
+      <div class="igrid">
+        <div class="icel"><img src="https://www.badenbower.com/wp-content/uploads/2026/05/Forbes.png" alt="Forbes" loading="lazy" onerror="this.style.display='none';this.parentNode.classList.add('noimg')" style="transform:scale(1.78);max-width:calc(100%/1.78)"><span class="nm">Forbes</span></div>
+        <div class="icel"><img src="https://www.badenbower.com/wp-content/uploads/2026/07/Time.png" alt="Time" loading="lazy" onerror="this.style.display='none';this.parentNode.classList.add('noimg')" style="transform:scale(2.4);max-width:calc(100%/2.4)"><span class="nm">Time</span></div>
+        <div class="icel"><img src="https://www.badenbower.com/wp-content/uploads/2026/05/Business_Insider.png" alt="Business Insider" loading="lazy" onerror="this.style.display='none';this.parentNode.classList.add('noimg')" style="transform:scale(1.54);max-width:calc(100%/1.54)"><span class="nm">Business Insider</span></div>
+        <div class="icel"><img src="https://www.badenbower.com/wp-content/uploads/2026/07/Entrepreneur.png" alt="Entrepreneur" loading="lazy" onerror="this.style.display='none';this.parentNode.classList.add('noimg')" style="transform:scale(2.6);max-width:calc(100%/2.6)"><span class="nm">Entrepreneur</span></div>
+        <div class="icel"><img src="https://www.badenbower.com/wp-content/uploads/2026/01/Fortune.png" alt="Fortune" loading="lazy" onerror="this.style.display='none';this.parentNode.classList.add('noimg')" style="transform:scale(1.67);max-width:calc(100%/1.67)"><span class="nm">Fortune</span></div>
+        <div class="icel"><img src="https://www.badenbower.com/wp-content/uploads/2026/07/Tech-Crunch.png" alt="TechCrunch" loading="lazy" onerror="this.style.display='none';this.parentNode.classList.add('noimg')" style="transform:scale(2.6);max-width:calc(100%/2.6)"><span class="nm">TechCrunch</span></div>
+        <div class="icel"><img src="https://www.badenbower.com/wp-content/uploads/2025/08/cio.jpg" alt="CIO" loading="lazy" onerror="this.style.display='none';this.parentNode.classList.add('noimg')"><span class="nm">CIO</span></div>
+        <div class="icel"><img src="https://www.badenbower.com/wp-content/uploads/2026/07/Mashable.png" alt="Mashable" loading="lazy" onerror="this.style.display='none';this.parentNode.classList.add('noimg')" style="transform:scale(2.6);max-width:calc(100%/2.6)"><span class="nm">Mashable</span></div>
+        <div class="icel"><img src="https://www.badenbower.com/wp-content/uploads/2026/07/Venture-Beat.png" alt="VentureBeat" loading="lazy" onerror="this.style.display='none';this.parentNode.classList.add('noimg')" style="transform:scale(2.6);max-width:calc(100%/2.6)"><span class="nm">VentureBeat</span></div>
+        <div class="icel"><img src="https://www.badenbower.com/wp-content/uploads/2025/12/Inc-Christmas-Special.png" alt="INC." loading="lazy" onerror="this.style.display='none';this.parentNode.classList.add('noimg')" style="transform:scale(2.26);max-width:calc(100%/2.26)"><span class="nm">INC.</span></div>
+        <div class="icel"><img src="https://www.badenbower.com/wp-content/uploads/2026/05/Reuters.png" alt="Reuters" loading="lazy" onerror="this.style.display='none';this.parentNode.classList.add('noimg')" style="transform:scale(2.16);max-width:calc(100%/2.16)"><span class="nm">Reuters</span></div>
+        <div class="icel"><img src="https://www.badenbower.com/wp-content/uploads/2023/03/MSN-Logo.jpg" alt="MSN" loading="lazy" onerror="this.style.display='none';this.parentNode.classList.add('noimg')"><span class="nm">MSN</span></div>
+        <div class="icel"><img src="https://www.badenbower.com/wp-content/uploads/2025/11/Apple-News-Logo-Media-Monopoly.jpg" alt="Apple News" loading="lazy" onerror="this.style.display='none';this.parentNode.classList.add('noimg')" style="transform:scale(2.6);max-width:calc(100%/2.6)"><span class="nm">Apple News</span></div>
+        <div class="icel"><img src="https://www.badenbower.com/wp-content/uploads/2026/05/Associated_Press.png" alt="Associated Press" loading="lazy" onerror="this.style.display='none';this.parentNode.classList.add('noimg')"><span class="nm">Associated Press</span></div>
+        <div class="icel"><img src="https://www.badenbower.com/wp-content/uploads/2026/05/USA_Today.png" alt="USA Today" loading="lazy" onerror="this.style.display='none';this.parentNode.classList.add('noimg')" style="transform:scale(1.78);max-width:calc(100%/1.78)"><span class="nm">USA Today</span></div>
+        <div class="icel"><img src="https://www.badenbower.com/wp-content/uploads/2026/05/Yahoo_Finance.png" alt="Yahoo Finance" loading="lazy" onerror="this.style.display='none';this.parentNode.classList.add('noimg')" style="transform:scale(1.3);max-width:calc(100%/1.3)"><span class="nm">Yahoo Finance</span></div>
+        <div class="icel"><img src="https://www.badenbower.com/wp-content/uploads/2026/07/FT-1.png" alt="Financial Times" loading="lazy" onerror="this.style.display='none';this.parentNode.classList.add('noimg')" style="transform:scale(2.6);max-width:calc(100%/2.6)"><span class="nm">Financial Times</span></div>
+        <div class="icel"><img src="https://www.badenbower.com/wp-content/uploads/2026/07/Bloomberg-Official.png" alt="Bloomberg" loading="lazy" onerror="this.style.display='none';this.parentNode.classList.add('noimg')" style="transform:scale(1.31);max-width:calc(100%/1.31)"><span class="nm">Bloomberg</span></div>
+        <div class="icel"><img src="https://www.badenbower.com/wp-content/uploads/2026/07/CNBC.png" alt="CNBC" loading="lazy" onerror="this.style.display='none';this.parentNode.classList.add('noimg')" style="transform:scale(2.4);max-width:calc(100%/2.4)"><span class="nm">CNBC</span></div>
+        <div class="icel"><img src="https://www.badenbower.com/wp-content/uploads/2026/07/Fox-Business.png" alt="Fox Business" loading="lazy" onerror="this.style.display='none';this.parentNode.classList.add('noimg')" style="transform:scale(1.54);max-width:calc(100%/1.54)"><span class="nm">Fox Business</span></div>
+        <div class="icel"><img src="https://www.badenbower.com/wp-content/uploads/2026/01/Miami_Herald_logo.svg_.png" alt="Miami Herald" loading="lazy" onerror="this.style.display='none';this.parentNode.classList.add('noimg')" style="transform:scale(1.09);max-width:calc(100%/1.09)"><span class="nm">Miami Herald</span></div>
+        <div class="icel"><img src="https://www.badenbower.com/wp-content/uploads/2026/07/LA-Times.png" alt="LA Times" loading="lazy" onerror="this.style.display='none';this.parentNode.classList.add('noimg')" style="transform:scale(2.6);max-width:calc(100%/2.6)"><span class="nm">LA Times</span></div>
+        <div class="icel"><img src="https://www.badenbower.com/wp-content/uploads/2026/05/New_York_Post.png" alt="NY Post" loading="lazy" onerror="this.style.display='none';this.parentNode.classList.add('noimg')" style="transform:scale(1.78);max-width:calc(100%/1.78)"><span class="nm">NY Post</span></div>
+        <div class="icel"><img src="https://www.badenbower.com/wp-content/uploads/2024/04/Chicago-Tribune.png" alt="Chicago Tribune" loading="lazy" onerror="this.style.display='none';this.parentNode.classList.add('noimg')" style="transform:scale(2.6);max-width:calc(100%/2.6)"><span class="nm">Chicago Tribune</span></div>
+        <div class="icel"><img src="https://www.badenbower.com/wp-content/uploads/2025/03/Washington-Times-1.png" alt="Washington Times" loading="lazy" onerror="this.style.display='none';this.parentNode.classList.add('noimg')" style="transform:scale(1.09);max-width:calc(100%/1.09)"><span class="nm">Washington Times</span></div>
+        <div class="icel"><img src="https://www.badenbower.com/wp-content/uploads/2026/07/WWD-1.png" alt="WWD" loading="lazy" onerror="this.style.display='none';this.parentNode.classList.add('noimg')" style="transform:scale(2.6);max-width:calc(100%/2.6)"><span class="nm">WWD</span></div>
+        <div class="icel"><img src="https://www.badenbower.com/wp-content/uploads/2024/03/Elle.png" alt="Elle" loading="lazy" onerror="this.style.display='none';this.parentNode.classList.add('noimg')"><span class="nm">Elle</span></div>
+        <div class="icel"><img src="https://www.badenbower.com/wp-content/uploads/2023/07/Glamour.png" alt="Glamour" loading="lazy" onerror="this.style.display='none';this.parentNode.classList.add('noimg')" style="transform:scale(1.1);max-width:calc(100%/1.1)"><span class="nm">Glamour</span></div>
+        <div class="icel"><img src="https://www.badenbower.com/wp-content/uploads/2025/05/Allure.png" alt="Allure" loading="lazy" onerror="this.style.display='none';this.parentNode.classList.add('noimg')" style="transform:scale(2.26);max-width:calc(100%/2.26)"><span class="nm">Allure</span></div>
+        <div class="icel"><img src="https://www.badenbower.com/wp-content/uploads/2026/05/Vogue.png" alt="Vogue" loading="lazy" onerror="this.style.display='none';this.parentNode.classList.add('noimg')" style="transform:scale(1.78);max-width:calc(100%/1.78)"><span class="nm">Vogue</span></div>
+        <div class="icel"><img src="https://www.badenbower.com/wp-content/uploads/2025/05/Variety.png" alt="Variety" loading="lazy" onerror="this.style.display='none';this.parentNode.classList.add('noimg')" style="transform:scale(1.97);max-width:calc(100%/1.97)"><span class="nm">Variety</span></div>
+        <div class="icel"><img src="https://www.badenbower.com/wp-content/uploads/2024/03/US-Weekly.png" alt="US Weekly" loading="lazy" onerror="this.style.display='none';this.parentNode.classList.add('noimg')"><span class="nm">US Weekly</span></div>
+        <div class="icel"><img src="https://www.badenbower.com/wp-content/uploads/2024/03/OK-Magazine.png" alt="OK Magazine" loading="lazy" onerror="this.style.display='none';this.parentNode.classList.add('noimg')"><span class="nm">OK Magazine</span></div>
+        <div class="icel"><img src="https://www.badenbower.com/wp-content/uploads/2026/07/Collider-1.png" alt="Collider" loading="lazy" onerror="this.style.display='none';this.parentNode.classList.add('noimg')" style="transform:scale(2.4);max-width:calc(100%/2.4)"><span class="nm">Collider</span></div>
+        <div class="icel"><img src="https://www.badenbower.com/wp-content/uploads/2025/08/Bustle-Logo.jpg" alt="Bustle" loading="lazy" onerror="this.style.display='none';this.parentNode.classList.add('noimg')"><span class="nm">Bustle</span></div>
+        <div class="icel"><img src="https://www.badenbower.com/wp-content/uploads/2024/08/Rolling_Stone-removebg-preview.png" alt="Rolling Stone" loading="lazy" onerror="this.style.display='none';this.parentNode.classList.add('noimg')" style="transform:scale(1.52);max-width:calc(100%/1.52)"><span class="nm">Rolling Stone</span></div>
+        <div class="icel"><img src="https://www.badenbower.com/wp-content/uploads/2026/07/Pitchfork-1.png" alt="Pitchfork" loading="lazy" onerror="this.style.display='none';this.parentNode.classList.add('noimg')" style="transform:scale(2.6);max-width:calc(100%/2.6)"><span class="nm">Pitchfork</span></div>
+        <div class="icel"><img src="https://www.badenbower.com/wp-content/uploads/2025/11/The-Source.png" alt="Source Magazine" loading="lazy" onerror="this.style.display='none';this.parentNode.classList.add('noimg')" style="transform:scale(1.44);max-width:calc(100%/1.44)"><span class="nm">Source Magazine</span></div>
+        <div class="icel"><img src="https://www.badenbower.com/wp-content/uploads/2024/03/Billboard-removebg-preview.png" alt="Billboard" loading="lazy" onerror="this.style.display='none';this.parentNode.classList.add('noimg')" style="transform:scale(1.09);max-width:calc(100%/1.09)"><span class="nm">Billboard</span></div>
+        <div class="icel"><img src="https://www.badenbower.com/wp-content/uploads/2026/01/Condenast.png" alt="Conde Nast Traveler" loading="lazy" onerror="this.style.display='none';this.parentNode.classList.add('noimg')" style="transform:scale(1.13);max-width:calc(100%/1.13)"><span class="nm">Conde Nast Traveler</span></div>
+        <div class="icel"><img src="https://www.badenbower.com/wp-content/uploads/2025/05/Travel__Leisure_Co._logo.png" alt="Travel and Leisure" loading="lazy" onerror="this.style.display='none';this.parentNode.classList.add('noimg')" style="transform:scale(1.09);max-width:calc(100%/1.09)"><span class="nm">Travel and Leisure</span></div>
+        <div class="icel"><img src="https://www.badenbower.com/wp-content/uploads/2025/05/Bon_Appetit_logo.png" alt="Bon Appetit" loading="lazy" onerror="this.style.display='none';this.parentNode.classList.add('noimg')" style="transform:scale(1.33);max-width:calc(100%/1.33)"><span class="nm">Bon Appetit</span></div>
+        <div class="icel"><img src="https://www.badenbower.com/wp-content/uploads/2025/05/Architechtural-Digest.png" alt="Architectural Digest" loading="lazy" onerror="this.style.display='none';this.parentNode.classList.add('noimg')" style="transform:scale(1.13);max-width:calc(100%/1.13)"><span class="nm">Architectural Digest</span></div>
+        <div class="icel"><img src="https://www.badenbower.com/wp-content/uploads/2026/07/Robb-Report.png" alt="Robb Report" loading="lazy" onerror="this.style.display='none';this.parentNode.classList.add('noimg')" style="transform:scale(2.6);max-width:calc(100%/2.6)"><span class="nm">Robb Report</span></div>
+        <div class="icel"><span class="nm-more">+ 650 more</span></div>
+      </div>
+      <div class="note">Some placements run in regional editions or syndicated partners of these mastheads. We confirm the exact edition with you in writing before work begins.</div>
+    </div>
+  </section>
+
+  <!-- ================= COMPARISON ================= -->
+  <section class="compare" id="compare">
+    <div class="inner">
+      <div class="kick"><div class="thin"></div><span>Compare <b>&middot;</b> three ways to buy PR</span></div>
+      <h2 class="h2">How Baden Bower compares</h2>
+      <div class="tscroll">
+        <table class="tbl">
+          <thead>
+            <tr>
+              <th scope="col">What changes</th>
+              <th scope="col">Traditional agency retainer</th>
+              <th scope="col">Press release wires</th>
+              <th scope="col" class="rec"><img src="https://www.badenbower.com/wp-content/uploads/2026/07/BB-logo-transparent.png" alt="Baden Bower" loading="lazy" onerror="this.style.display='none';this.parentNode.classList.add('noimg')"><span class="nm">Baden Bower</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>What you pay for</td><td>Hours and activity reports</td><td>Distribution volume</td><td class="rec">Delivered coverage</td></tr>
+            <tr><td>Outlet named before payment</td><td>Rarely</td><td>No, syndication lists</td><td class="rec">Yes, in writing</td></tr>
+            <tr><td>If the article does not run</td><td>You still pay the retainer</td><td>Not applicable</td><td class="rec">Full refund of that placement</td></tr>
+            <tr><td>Draft approval before submission</td><td>Sometimes</td><td>You write it yourself</td><td class="rec">Always</td></tr>
+            <tr><td>What actually publishes</td><td>Earned, never assured</td><td>Labelled as a release</td><td class="rec">Authored editorial</td></tr>
+            <tr><td>Typical first feature</td><td>Months, if at all</td><td>Fast but low value</td><td class="rec">14 to 28 days</td></tr>
+            <tr><td>Lock-in</td><td>6 to 12 month retainers</td><td>Per release</td><td class="rec">No lock-in</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= NUMBERED RULES ================= -->
+  <section class="method">
+    <div class="inner">
+      <div class="mgrid">
+        <div>
+          <div class="kick"><div class="thin"></div><span>The method <b>&middot;</b> four steps</span></div>
+          <h2 class="h2">How does an engagement run?</h2>
+        </div>
+        <ol class="steps">
+          <li>
+            <span class="n" aria-hidden="true">1.</span>
+            <div><h3>Strategy call</h3><p>Thirty minutes. We learn your launch, your angle, and which publications matter to your buyer.</p></div>
+          </li>
+          <li>
+            <span class="n" aria-hidden="true">2.</span>
+            <div><h3>Outlets agreed in writing</h3><p>You approve the named publications. The guarantee attaches to that list, not to a vague tier.</p></div>
+          </li>
+          <li>
+            <span class="n" aria-hidden="true">3.</span>
+            <div><h3>Drafts you approve</h3><p>Our editors write the story in the outlet's house voice. Nothing reaches an editor without your sign-off.</p></div>
+          </li>
+          <li>
+            <span class="n" aria-hidden="true">4.</span>
+            <div><h3>It runs, or you are refunded</h3><p>Typical window is 14 to 28 days. If the article does not run, the refund clause executes. No kill fees, no excuses.</p></div>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= IN THE PRESS ================= -->
+  <section class="press" id="press">
+    <div class="inner">
+      <div class="kick"><div class="thin"></div><span>In the press <b>&middot;</b> about Baden Bower</span></div>
+      <h2 class="h2">The agency the press writes about</h2>
+      <div class="pgrid">
+        <div class="pcell">
+          <div class="mast"><img src="https://www.badenbower.com/wp-content/uploads/2026/05/Forbes.png" alt="Forbes" style="transform:scale(1.78);max-width:calc(100%/1.78)" loading="lazy" onerror="this.style.display='none';this.parentNode.classList.add('noimg')"><span class="nm nm-forbes">Forbes</span></div>
+          <p class="q">Crowned the world's most disruptive PR agency in 2025, with plans to reach 7,600 clients.</p>
+          <a class="txtlink go" href="https://forbesliechtenstein.com/pr-giant-baden-bowers-massive-expansion-plot-as-publicity-firm-sets-its-sights-on-7600-clients-in-an-ambitious-bid-for-240-growth/">Read the story</a>
+        </div>
+        <div class="pcell">
+          <div class="mast"><img src="https://www.badenbower.com/wp-content/uploads/2025/09/Fast-Company.jpg" alt="Fast Company" loading="lazy" onerror="this.style.display='none';this.parentNode.classList.add('noimg')"><span class="nm nm-bi" style="letter-spacing:.02em">FAST COMPANY</span></div>
+          <p class="q">The formula behind 25,000 news features that has left rival agencies stunned.</p>
+          <a class="txtlink go" href="https://fastcompany.ph/secret-formula-behind-baden-bowers-staggering-25000-news-features-thats-left-rivals-stunned/">Read the story</a>
+        </div>
+        <div class="pcell">
+          <div class="mast"><img src="https://www.badenbower.com/wp-content/uploads/2026/07/Entrepreneur.png" alt="Entrepreneur" style="transform:scale(2.6);max-width:calc(100%/2.6)" loading="lazy" onerror="this.style.display='none';this.parentNode.classList.add('noimg')"><span class="nm nm-ent">ENTREPRENEUR</span></div>
+          <p class="q">How Baden Bower disrupted the PR agency model in just five years.</p>
+          <a class="txtlink go" href="https://www.entrepreneur.com/ka/business-news/baden-bower-disrupted-the-pr-agency-model-in-just-5-years/474693">Read the story</a>
+        </div>
+        <div class="pcell">
+          <div class="mast"><img src="https://www.badenbower.com/wp-content/uploads/2025/03/Vanity-Fair-Logo.png" alt="Vanity Fair" loading="lazy" onerror="this.style.display='none';this.parentNode.classList.add('noimg')"><span class="nm nm-vf">Vanity Fair</span></div>
+          <p class="q">The strategy getting ChatGPT, Perplexity and Claude to cite its clients.</p>
+          <a class="txtlink go" href="https://vanityfairgermany.com/discover-baden-bowers-secret-strategy-to-get-leading-ai-engines-like-chatgpt-perplexity-and-claude-to-optimize-its-clients-ai-visibility/">Read the story</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CERTIFICATE BAND ================= -->
+  <section class="guar" id="guarantee">
+    <div class="inner">
+      <div class="ggrid">
+        <div>
+          <div class="kick onnavy"><div class="thin"></div><span>The guarantee <b>&middot;</b> in every contract</span></div>
+          <h2>What happens if the article does not run?</h2>
+          <p class="lede">You are refunded. Not credited, not rolled over, refunded. The clause is written into every contract and it has been since 2018.</p>
+        </div>
+        <div class="cert">
+          <div class="in">
+            <div class="lab">Terms of the guarantee</div>
+            <ul class="marks">
+              <li>The outlet list is agreed and signed before payment</li>
+              <li>You approve the final draft before submission</li>
+              <li>Non-publication triggers a full refund of that placement</li>
+              <li>No deposits held, no kill fees, no lock-in</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOUNDER ================= -->
+  <section class="founder" id="founder">
+    <div class="inner">
+      <div class="kick"><div class="thin"></div><span>The founder <b>&middot;</b> since 2018</span></div>
+      <div class="fpanel" style="margin-top:24px">
+        <div class="fpic">
+          <img src="https://www.badenbower.com/wp-content/uploads/2026/07/AJ-CEO-Baden-Bower.png" alt="AJ Ignacio, Founder and CEO of Baden Bower" loading="lazy">
+        </div>
+        <div class="fbody">
+          <blockquote>&ldquo;I built Baden Bower because the PR industry was taking money and delivering excuses.&rdquo;</blockquote>
+          <p class="attr">Running the guaranteed model since 2018. <a class="txtlink" href="https://www.badenbower.com/about-us/">About the agency</a></p>
+          <div class="fmeta">
+            <div class="fwho">
+              <div class="fname">AJ Ignacio</div>
+              <div class="frole">Founder &amp; CEO, Baden Bower</div>
+            </div>
+            <div class="fchips">
+              <span class="fchip">New York</span>
+              <span class="fchip">Sydney</span>
+              <span class="fchip">London</span>
+            </div>
+            <a class="fli" href="https://www.linkedin.com/in/adrianjohnignacio/" target="_blank" rel="noopener">
+              <svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              View LinkedIn
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FAQ ================= -->
+  <section class="faq" id="faq">
+    <div class="inner">
+      <div>
+        <div class="kick"><div class="thin"></div><span>Questions <b>&middot;</b> answered plainly</span></div>
+        <h2 class="h2">Common questions</h2>
+        <div class="list">
+          <details open>
+            <summary><span class="qn">Q1.</span><span class="qt">Is this sponsored content or earned media?</span><span class="plus" aria-hidden="true"></span></summary>
+            <p class="a">The article runs as editorial coverage under the publication's normal byline conventions, not as a labelled advertisement. Where an outlet requires a disclosure, we tell you before you approve it.</p>
+          </details>
+          <details>
+            <summary><span class="qn">Q2.</span><span class="qt">How long does a placement take?</span><span class="plus" aria-hidden="true"></span></summary>
+            <p class="a">Typically 14 to 28 days from kickoff to publication, and once you approve the final article it goes live within 72 hours. Tier-1 mastheads sometimes take 4 to 6 weeks. We give you the realistic window on the strategy call, in writing.</p>
+          </details>
+          <details>
+            <summary><span class="qn">Q3.</span><span class="qt">Do you write the article?</span><span class="plus" aria-hidden="true"></span></summary>
+            <p class="a">Yes. Our editors craft the angle and draft the copy in the outlet's house voice. You review and approve before it reaches an editor's inbox.</p>
+          </details>
+          <details>
+            <summary><span class="qn">Q4.</span><span class="qt">What does it cost?</span><span class="plus" aria-hidden="true"></span></summary>
+            <p class="a">One agency program, four levels of firepower. Establish starts from $9,000 a month on the 12-month program billed annually, Authority from $13,500, and Dominant from $18,000, with quarterly and monthly billing also available. Agency of Record engagements start from $35,000 a month, scoped by proposal. Every program includes guaranteed features, the full earned-media program and the money-back guarantee. The full breakdown is on the <a class="txtlink" href="https://www.badenbower.com/pricing/">pricing page</a>.</p>
+          </details>
+          <details>
+            <summary><span class="qn">Q5.</span><span class="qt">Who is Baden Bower for?</span><span class="plus" aria-hidden="true"></span></summary>
+            <p class="a">Business owners seeking media credibility to increase conversions, executives building thought leadership, authors and speakers pursuing keynotes, and <a class="txtlink" href="https://www.badenbower.com/eb-1a-publicity">O-1 or EB-1A visa applicants</a> who need published coverage as documented evidence.</p>
+          </details>
+          <details>
+            <summary><span class="qn">Q6.</span><span class="qt">Will my coverage show up in AI answers?</span><span class="plus" aria-hidden="true"></span></summary>
+            <p class="a">That is the point of the model. ChatGPT, Perplexity and Gemini cite authored editorial far more than wire distribution, and every placement is permanently indexed. We track where the engines cite you, and where they cite competitors instead.</p>
+          </details>
+          <details>
+            <summary><span class="qn">Q7.</span><span class="qt">What if an outlet becomes unavailable?</span><span class="plus" aria-hidden="true"></span></summary>
+            <p class="a">We substitute an outlet of equivalent standing, agreed with you first, or refund that placement. Availability shifts month to month, which is why the outlet list is mapped on the strategy call.</p>
+          </details>
+        </div>
+        <p class="updated">Last updated July 2026. Reviewed by the Baden Bower editorial team.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FORM SPLIT ================= -->
+  <section class="contact" id="contact">
+    <div class="inner">
+      <div class="cgrid">
+        <div>
+          <div class="kick"><div class="thin"></div><span>Contact <b>&middot;</b> one business day</span></div>
+          <h2 class="h2">Tell us about your launch</h2>
+          <p class="lede">One paragraph is enough: what you do, what is launching, which outlets matter. We come back with a realistic placement plan within one business day.</p>
+          <div class="meta">
+            <div>New York &middot; Sydney &middot; London</div>
+            <div>[bb_review_rating]/5 from [bb_review_count]+ reviews</div>
+            <div>Founded 2018 by <a class="txtlink" href="https://www.badenbower.com/about-us/">AJ Ignacio</a></div>
+          </div>
+        </div>
+        <div class="fcard">
+          [elementor-template id="31645"]
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- (Theme footer follows) -->
+
+</div>

@@ -1,0 +1,380 @@
+<!-- ====================================================================
+     BADEN BOWER HOMEPAGE — WIDGET 1 of 2: HERO
+     Paste this into the FIRST Elementor HTML widget.
+     Carries the shared <style>, the font links, and the JSON-LD schema.
+     ==================================================================== -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,500;1,6..72,600&family=Radio+Canada:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- ===================================================================
+     SCHEMA (lives in the HERO widget in Elementor, per system §6.1/§6.4).
+     FAQ answers below match the on-page copy word for word.
+     ==================================================================== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.badenbower.com/#org",
+      "name": "Baden Bower",
+      "url": "https://www.badenbower.com/",
+      "logo": "https://www.badenbower.com/wp-content/uploads/2021/07/BB-logo-3.png",
+      "description": "Guaranteed media placement agency. Editorial coverage in Forbes, Vogue, Business Insider and 700+ outlets, approved in advance and refunded if the article does not run.",
+      "foundingDate": "2018",
+      "founder": {
+        "@type": "Person",
+        "name": "AJ Ignacio",
+        "jobTitle": "Founder & CEO",
+        "image": "https://www.badenbower.com/wp-content/uploads/2026/07/AJ-CEO-Baden-Bower.png",
+        "sameAs": "https://www.linkedin.com/in/adrianjohnignacio/"
+      },
+      "areaServed": "Worldwide",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.7",
+        "reviewCount": "797",
+        "bestRating": "5"
+      },
+      "_comment_aggregateRating": "Set to the live ProvenExpert figures shown sitewide as of July 2026 (4.7 from 797+). Visible page figures render via the bb_review_rating / bb_review_count shortcodes; keep these two schema values matched to them at each content review. Never put shortcodes inside this JSON-LD.",
+      "address": [
+        { "@type": "PostalAddress", "addressLocality": "New York", "addressCountry": "US" },
+        { "@type": "PostalAddress", "addressLocality": "Sydney", "addressCountry": "AU" },
+        { "@type": "PostalAddress", "addressLocality": "London", "addressCountry": "GB" }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.badenbower.com/#website",
+      "url": "https://www.badenbower.com/",
+      "name": "Baden Bower",
+      "publisher": { "@id": "https://www.badenbower.com/#org" }
+    },
+    {
+      "@type": "Service",
+      "name": "Guaranteed Media Placement",
+      "serviceType": "Public relations and editorial placement",
+      "provider": { "@id": "https://www.badenbower.com/#org" },
+      "description": "Editorial PR with a contractual commitment: your story runs in a publication you approve before you pay, refunded if it does not run.",
+      "areaServed": "Worldwide"
+    },
+    {
+      "@type": "HowTo",
+      "name": "How a Baden Bower engagement runs",
+      "step": [
+        { "@type": "HowToStep", "position": 1, "name": "Strategy call", "text": "Thirty minutes. We learn your launch, your angle, and which publications matter to your buyer." },
+        { "@type": "HowToStep", "position": 2, "name": "Outlets agreed in writing", "text": "You approve the named publications. The guarantee attaches to that list, not to a vague tier." },
+        { "@type": "HowToStep", "position": 3, "name": "Drafts you approve", "text": "Our editors write the story in the outlet's house voice. Nothing reaches an editor without your sign-off." },
+        { "@type": "HowToStep", "position": 4, "name": "It runs, or you are refunded", "text": "Typical window is 14 to 28 days. If the article does not run, the refund clause executes. No kill fees, no excuses." }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "Is this sponsored content or earned media?", "acceptedAnswer": { "@type": "Answer", "text": "The article runs as editorial coverage under the publication's normal byline conventions, not as a labelled advertisement. Where an outlet requires a disclosure, we tell you before you approve it." } },
+        { "@type": "Question", "name": "How long does a placement take?", "acceptedAnswer": { "@type": "Answer", "text": "Typically 14 to 28 days from kickoff to publication, and once you approve the final article it goes live within 72 hours. Tier-1 mastheads sometimes take 4 to 6 weeks. We give you the realistic window on the strategy call, in writing." } },
+        { "@type": "Question", "name": "Do you write the article?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Our editors craft the angle and draft the copy in the outlet's house voice. You review and approve before it reaches an editor's inbox." } },
+        { "@type": "Question", "name": "What does it cost?", "acceptedAnswer": { "@type": "Answer", "text": "One agency program, four levels of firepower. Establish starts from $9,000 a month on the 12-month program billed annually, Authority from $13,500, and Dominant from $18,000, with quarterly and monthly billing also available. Agency of Record engagements start from $35,000 a month, scoped by proposal. Every program includes guaranteed features, the full earned-media program and the money-back guarantee. The full breakdown is on the pricing page." } },
+        { "@type": "Question", "name": "Who is Baden Bower for?", "acceptedAnswer": { "@type": "Answer", "text": "Business owners seeking media credibility to increase conversions, executives building thought leadership, authors and speakers pursuing keynotes, and O-1 or EB-1A visa applicants who need published coverage as documented evidence." } },
+        { "@type": "Question", "name": "Will my coverage show up in AI answers?", "acceptedAnswer": { "@type": "Answer", "text": "That is the point of the model. ChatGPT, Perplexity and Gemini cite authored editorial far more than wire distribution, and every placement is permanently indexed. We track where the engines cite you, and where they cite competitors instead." } },
+        { "@type": "Question", "name": "What if an outlet becomes unavailable?", "acceptedAnswer": { "@type": "Answer", "text": "We substitute an outlet of equivalent standing, agreed with you first, or refund that placement. Availability shifts month to month, which is why the outlet list is mapped on the strategy call." } }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.badenbower.com/" }
+      ]
+    }
+  ]
+}
+</script>
+
+<style>
+/* =====================================================================
+   BADEN BOWER, HOMEPAGE, PRODUCTION BUILD OF THE APPROVED DESIGN
+   Design system v4 "Editorial Print". Scope prefix: #bbhp.
+   Shared stylesheet — kept identical in both the HERO and BODY widgets
+   so each widget is self-contained and order-independent in Elementor.
+   ===================================================================== */
+#bbhp{--navy:#0B1E3D;--gold:#C9A84C;--dgold:#7a6222;--cream:#F7F5F0;
+  --ink:#1B2A44;--grey:#5B6577;--hair:rgba(11,30,61,.28);
+  --serif:'Newsreader',Georgia,serif;--sans:'Radio Canada',system-ui,sans-serif}
+#bbhp *,#bbhp *::before,#bbhp *::after{box-sizing:border-box;margin:0;padding:0}
+#bbhp{font-family:var(--sans);color:var(--ink);background:var(--cream);line-height:1.6;font-size:16px;-webkit-font-smoothing:antialiased}
+#bbhp img{max-width:100%;display:block}
+#bbhp a{color:inherit;text-decoration:none}
+#bbhp .wrap{max-width:1200px;margin:0 auto;padding:0 40px}
+#bbhp a:focus-visible,#bbhp button:focus-visible,#bbhp input:focus-visible,#bbhp textarea:focus-visible,#bbhp summary:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+#bbhp .txtlink{color:var(--navy);font-weight:600;border-bottom:2px solid var(--gold)}
+
+/* Scotch rule kicker */
+#bbhp .kick{display:inline-block;min-width:220px;border-top:3px solid var(--navy);padding-top:2px}
+#bbhp .kick .thin{border-top:1px solid var(--navy);margin-bottom:14px}
+#bbhp .kick span{font-weight:700;font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--navy)}
+#bbhp .kick span b{color:var(--gold);font-weight:700}
+#bbhp .kick.onnavy{border-top-color:#fff}
+#bbhp .kick.onnavy .thin{border-top-color:rgba(255,255,255,.6)}
+#bbhp .kick.onnavy span{color:#fff}
+
+/* display type */
+#bbhp .h2{font-family:var(--serif);font-weight:600;font-size:clamp(28px,3.6vw,44px);line-height:1.1;color:var(--navy);margin:24px 0 0}
+
+/* letterpress buttons (all <a> or spans; never <button> for Elementor) */
+#bbhp .btn{display:inline-block;font-family:var(--sans);font-weight:700;font-size:15px;padding:16px 32px;border-radius:0;
+  background:var(--navy);color:#fff;box-shadow:4px 4px 0 var(--gold);cursor:pointer;border:none;
+  transition:transform 160ms ease,box-shadow 160ms ease}
+#bbhp .btn.alt{background:var(--cream);color:var(--navy)}
+#bbhp .btn:hover{transform:translate(3px,3px);box-shadow:1px 1px 0 var(--gold)}
+#bbhp .btn.ghost{background:transparent;color:#fff;border:1.5px solid #fff;box-shadow:none;padding:14.5px 30.5px;
+  transition:background 160ms ease,color 160ms ease}
+#bbhp .btn.ghost:hover{transform:none;background:#fff;color:var(--navy)}
+@media(prefers-reduced-motion:reduce){#bbhp .btn,#bbhp .btn.ghost{transition:none}#bbhp .btn:hover{transform:none}}
+
+/* registration-square list */
+#bbhp .marks{list-style:none;display:grid;gap:11px;font-size:15px;color:#E7ECF4}
+#bbhp .marks li{position:relative;padding-left:22px;line-height:1.5}
+#bbhp .marks li::before{content:'';position:absolute;left:0;top:.42em;width:9px;height:9px;background:var(--gold)}
+
+/* ============================ HERO ================================= */
+#bbhp .hero{position:relative;background:var(--navy);overflow:hidden}
+#bbhp .hero .bg{position:absolute;inset:0;background-size:cover;background-position:right center;
+  background-image:url('https://www.badenbower.com/wp-content/uploads/2026/04/Yahoo-Finance-Hero-Video-Fallback.jpg')}
+#bbhp .hero .ov{position:absolute;inset:0;
+  background:linear-gradient(95deg,rgba(11,30,61,.98) 0%,rgba(11,30,61,.94) 38%,rgba(11,30,61,.66) 62%,rgba(11,30,61,.32) 100%)}
+#bbhp .hero .inner{position:relative;max-width:1200px;margin:0 auto;padding:170px 40px 180px}
+#bbhp .hero .copy{max-width:560px}
+#bbhp .hero h1{font-family:var(--serif);font-weight:600;font-size:clamp(38px,4.9vw,60px);line-height:1.05;letter-spacing:-0.015em;color:#fff;margin:26px 0 0}
+#bbhp .hero h1 em{font-style:italic;font-weight:500;color:var(--gold)}
+#bbhp .hero .sub{font-size:17.5px;line-height:1.6;color:rgba(255,255,255,.82);margin:22px 0 0}
+#bbhp .hero .ctas{display:flex;gap:18px;flex-wrap:wrap;margin-top:34px}
+/* the stamp: signature element, hero only */
+#bbhp .stamp{position:absolute;right:9%;top:96px;width:168px;height:168px;border:3px double var(--gold);border-radius:50%;
+  transform:rotate(-9deg);display:grid;place-items:center}
+#bbhp .stamp .in{width:140px;height:140px;border:1px solid var(--gold);border-radius:50%;display:grid;place-items:center;
+  text-align:center;font-weight:700;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);line-height:1.9}
+
+/* ============================ DATELINE ============================= */
+#bbhp .dateline{background:var(--cream);padding-top:48px}
+#bbhp .dateline .frame{border-top:3px solid var(--navy);padding-top:2px}
+#bbhp .dateline .thin{border-top:1px solid var(--navy)}
+#bbhp .dateline .row{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid var(--navy)}
+#bbhp .dl{padding:26px 22px;border-right:1px solid var(--hair)}
+#bbhp .dl:last-child{border-right:none}
+#bbhp .dl b{display:block;font-family:var(--serif);font-weight:600;font-size:34px;color:var(--navy);line-height:1}
+#bbhp .dl small{display:block;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--grey);margin-top:8px}
+
+/* ============================ DEFINITION =========================== */
+#bbhp .define{background:var(--cream)}
+#bbhp .define .inner{max-width:1200px;margin:0 auto;padding:92px 40px}
+#bbhp .define .p1{font-size:16.5px;line-height:1.65;color:var(--ink);margin:20px 0 0}
+#bbhp .define .p2{font-size:16px;line-height:1.62;color:var(--grey);margin:16px 0 0}
+
+/* ============================ ENGINES ============================== */
+#bbhp .engines{background:var(--cream)}
+#bbhp .engines .inner{max-width:1200px;margin:0 auto;padding:0 40px 92px}
+#bbhp .egrid{border:1.5px solid var(--navy);display:grid;grid-template-columns:1fr 1fr}
+#bbhp .eng{padding:42px 40px}
+#bbhp .eng.g{background:var(--navy);border-right:1px solid var(--hair)}
+#bbhp .eng.e{background:#fff}
+#bbhp .eng .lab{font-weight:700;font-size:11px;letter-spacing:.2em;text-transform:uppercase}
+#bbhp .eng.g .lab{color:var(--gold)}
+#bbhp .eng.e .lab{color:var(--grey)}
+#bbhp .eng h3{font-family:var(--serif);font-weight:600;font-size:26px;margin:12px 0 0}
+#bbhp .eng.g h3{color:#fff}
+#bbhp .eng.e h3{color:var(--navy)}
+#bbhp .eng.g .marks{margin-top:22px}
+#bbhp .eng.e p{font-size:15.5px;line-height:1.62;margin:18px 0 0;color:var(--grey)}
+#bbhp .eng.e p + p{margin-top:14px;color:var(--ink)}
+
+/* ============================ INDEX ================================ */
+#bbhp .index{background:#fff;border-top:1px solid var(--hair);border-bottom:1px solid var(--hair)}
+#bbhp .index .inner{max-width:1200px;margin:0 auto;padding:92px 40px}
+#bbhp .igrid{border:1.5px solid var(--navy);display:grid;grid-template-columns:repeat(5,1fr);margin-top:34px;background:#fff}
+#bbhp .icel{min-height:96px;display:flex;align-items:center;justify-content:center;padding:12px 16px;text-align:center;color:var(--navy);
+  border-left:1px solid var(--hair);border-top:1px solid var(--hair);overflow:hidden}
+#bbhp .igrid .icel:nth-child(-n+5){border-top:none}
+#bbhp .igrid .icel:nth-child(5n+1){border-left:none}
+/* Logos: 44px base with the live site's per-logo scale factors (inline
+   transform) so every mark renders visually equal; each scaled logo is
+   width-capped at 100%/scale so wide wordmarks shrink to fit instead of
+   clipping. Natural colours, per Jezz/AJ direction July 2026. */
+#bbhp .icel img{transform-origin:center;max-height:44px;width:auto;max-width:100%;object-fit:contain}
+#bbhp .icel .nm,#bbhp .mast .nm{display:none;font-family:var(--serif);font-weight:600;font-size:17px;color:var(--navy)}
+#bbhp .icel.noimg .nm,#bbhp .mast.noimg .nm{display:block}
+#bbhp .nm-more{font-weight:600;font-size:14px;color:var(--grey)}
+/* masthead type treatments used by press fallback names */
+#bbhp .mast .nm-forbes{font-family:var(--serif);font-weight:700;font-size:22px}
+#bbhp .mast .nm-bi{font-family:var(--sans);font-weight:700;font-size:15px;letter-spacing:.04em}
+#bbhp .mast .nm-ent{font-family:var(--sans);font-weight:700;font-size:15px;letter-spacing:.06em}
+#bbhp .mast .nm-vf{font-family:var(--serif);font-style:italic;font-weight:600;font-size:20px}
+#bbhp .index .note{border-left:3px solid var(--gold);padding:4px 0 4px 16px;margin-top:22px;font-size:13.5px;color:var(--grey)}
+
+/* ============================ METHOD =============================== */
+#bbhp .method{background:var(--cream)}
+#bbhp .method .inner{max-width:1200px;margin:0 auto;padding:92px 40px}
+#bbhp .mgrid{display:grid;grid-template-columns:1fr 1.6fr;gap:60px;align-items:start}
+#bbhp .steps{list-style:none;border-top:1px solid var(--navy)}
+#bbhp .steps li{display:grid;grid-template-columns:72px 1fr;gap:22px;padding:24px 0;border-bottom:1px solid var(--hair)}
+#bbhp .steps li:last-child{border-bottom:1px solid var(--navy)}
+#bbhp .steps .n{font-family:var(--serif);font-style:italic;font-weight:600;font-size:30px;color:var(--dgold)}
+#bbhp .steps h3{font-family:var(--serif);font-weight:600;font-size:21px;color:var(--navy)}
+#bbhp .steps p{font-size:15px;line-height:1.6;color:var(--grey);margin:8px 0 0}
+
+/* ============================ GUARANTEE ============================ */
+#bbhp .guar{background:var(--navy)}
+#bbhp .guar .inner{max-width:1200px;margin:0 auto;padding:92px 40px}
+#bbhp .ggrid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+#bbhp .guar h2{font-family:var(--serif);font-weight:600;font-size:clamp(28px,3.6vw,44px);line-height:1.1;color:#fff;margin:24px 0 0}
+#bbhp .guar .lede{font-size:16px;line-height:1.62;color:rgba(255,255,255,.8);margin:18px 0 0}
+#bbhp .cert{border:1px solid rgba(255,255,255,.35);padding:6px}
+#bbhp .cert .in{border:1px solid rgba(201,168,76,.5);padding:34px 32px}
+#bbhp .cert .lab{font-weight:700;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold)}
+#bbhp .cert .marks{margin-top:18px}
+
+/* ============================ FAQ ================================== */
+#bbhp .faq{background:var(--cream)}
+#bbhp .faq .inner{max-width:1200px;margin:0 auto;padding:92px 40px}
+#bbhp .faq .h2{margin-bottom:34px}
+#bbhp .faq .list{border-top:1px solid var(--navy);border-bottom:1px solid var(--navy)}
+#bbhp .faq details{border-bottom:1px solid var(--hair)}
+#bbhp .faq details:last-of-type{border-bottom:none}
+#bbhp .faq summary{list-style:none;cursor:pointer;padding:20px 4px;display:flex;align-items:baseline;gap:14px}
+#bbhp .faq summary::-webkit-details-marker{display:none}
+#bbhp .faq .qn{font-family:var(--serif);font-style:italic;font-weight:600;font-size:18px;color:var(--dgold)}
+#bbhp .faq .qt{flex:1;font-family:var(--serif);font-weight:600;font-size:19px;color:var(--navy)}
+#bbhp .faq .plus{font-weight:700;font-size:18px;color:var(--gold)}
+#bbhp .faq .plus::before{content:'+'}
+#bbhp .faq details[open] .plus::before{content:'\2013'}
+#bbhp .faq .a{padding:0 4px 22px 46px;font-size:15.5px;color:var(--grey);line-height:1.62}
+#bbhp .faq .updated{font-style:italic;font-size:13px;color:var(--grey);margin:18px 0 0}
+
+/* ============================ CONTACT ============================== */
+#bbhp .contact{background:#fff;border-top:1px solid var(--hair)}
+#bbhp .contact .inner{max-width:1200px;margin:0 auto;padding:92px 40px}
+#bbhp .cgrid{display:grid;grid-template-columns:1.1fr 1fr;gap:60px;align-items:start}
+#bbhp .contact .lede{font-size:16px;line-height:1.62;color:var(--grey);margin:18px 0 0}
+#bbhp .contact .meta{display:grid;gap:10px;margin-top:26px;font-size:14px;color:var(--grey)}
+#bbhp .fcard{background:var(--cream);border-top:6px solid var(--gold);border-left:1px solid var(--hair);border-right:1px solid var(--hair);border-bottom:1px solid var(--hair);padding:32px}
+
+/* ============================ COMPARE ============================== */
+#bbhp .compare{background:var(--cream)}
+#bbhp .compare .inner{max-width:1200px;margin:0 auto;padding:92px 40px 0}
+#bbhp .tscroll{overflow-x:auto;-webkit-overflow-scrolling:touch;margin-top:34px;border:1.5px solid var(--navy)}
+#bbhp table.tbl{width:100%;border-collapse:collapse;min-width:760px;font-size:14.5px;background:#fff}
+#bbhp .tbl thead th{background:var(--navy);color:#fff;font-family:var(--sans);font-weight:600;font-size:13.5px;padding:16px 18px;text-align:center}
+#bbhp .tbl thead th:first-child{text-align:left}
+#bbhp .tbl thead th.rec{background:var(--gold);color:var(--navy);font-weight:700;border-left:1.5px solid var(--gold);border-right:1.5px solid var(--gold)}
+#bbhp .tbl thead th.rec img{height:28px;width:auto;max-width:150px;object-fit:contain;display:inline-block;vertical-align:middle}
+#bbhp .tbl thead th.rec .nm{display:none;font-family:var(--sans);font-weight:700;color:var(--navy)}
+#bbhp .tbl thead th.rec.noimg .nm{display:inline}
+#bbhp .tbl th,#bbhp .tbl td{padding:14px 18px;text-align:center;border-bottom:1px solid var(--hair);color:var(--grey)}
+#bbhp .tbl td:first-child{text-align:left;font-weight:500;color:var(--navy);width:28%}
+#bbhp .tbl td.rec{background:rgba(201,168,76,.16);font-weight:600;color:var(--navy);border-left:1.5px solid var(--gold);border-right:1.5px solid var(--gold)}
+#bbhp .tbl tbody tr:last-child td{border-bottom:none}
+#bbhp .tbl tbody tr:last-child td.rec{border-bottom:1.5px solid var(--gold)}
+
+/* ============================ PRESS ================================ */
+#bbhp .press{background:#fff;border-top:1px solid var(--hair);border-bottom:1px solid var(--hair)}
+#bbhp .press .inner{max-width:1200px;margin:0 auto;padding:92px 40px}
+#bbhp .pgrid{border:1.5px solid var(--navy);display:grid;grid-template-columns:repeat(4,1fr);margin-top:34px;background:#fff}
+#bbhp .pcell{padding:30px 28px;border-right:1px solid var(--hair);display:flex;flex-direction:column}
+#bbhp .pgrid .pcell:last-child{border-right:none}
+#bbhp .pcell .mast{color:var(--navy);height:30px;display:flex;align-items:center}
+#bbhp .pcell .mast img{transform-origin:left center;height:26px;width:auto;max-width:100%;object-fit:contain}
+#bbhp .pcell .q{font-size:14.5px;line-height:1.6;color:var(--grey);margin:16px 0 18px;padding-top:16px;border-top:1px solid var(--hair);flex-grow:1}
+#bbhp .pcell .go{font-size:13.5px}
+
+/* ============================ FOUNDER ============================== */
+#bbhp .founder{background:var(--cream)}
+#bbhp .founder .inner{max-width:1200px;margin:0 auto;padding:92px 40px 0}
+#bbhp .fpanel{border:1.5px solid var(--navy);background:#fff;position:relative;padding:0;display:grid;grid-template-columns:250px 1fr;overflow:hidden}
+#bbhp .fpanel::before{content:'';position:absolute;left:0;top:0;bottom:0;width:6px;background:var(--gold);z-index:1}
+#bbhp .fpic{position:relative;min-height:100%;border-right:1px solid var(--hair)}
+#bbhp .fpic img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+#bbhp .fbody{padding:40px 44px}
+#bbhp .fpanel blockquote{border:none !important;margin:0 !important;padding:0 !important;background:none !important;quotes:none;font-family:var(--serif);font-weight:500;font-style:italic;font-size:clamp(21px,2.4vw,27px);line-height:1.4;color:var(--navy)}
+#bbhp .fpanel blockquote::before,#bbhp .fpanel blockquote::after{content:none !important}
+#bbhp .fpanel .attr{margin-top:14px;font-size:14.5px;color:var(--grey)}
+#bbhp .fmeta{display:flex;flex-wrap:wrap;align-items:center;gap:14px 20px;margin-top:26px;padding-top:24px;border-top:1px solid var(--hair)}
+#bbhp .fwho{margin-right:auto}
+#bbhp .fname{font-family:var(--serif);font-weight:600;font-size:19px;color:var(--navy);line-height:1.2}
+#bbhp .frole{font-family:var(--sans);font-weight:700;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--dgold);margin-top:4px}
+#bbhp .fchips{display:flex;flex-wrap:wrap;gap:8px}
+#bbhp .fchip{font-family:var(--sans);font-weight:600;font-size:12px;color:var(--navy);border:1px solid var(--hair);padding:3px 10px}
+#bbhp .fli{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;
+  border:1.5px solid var(--navy);font-family:var(--sans);font-weight:700;font-size:13.5px;color:var(--navy);
+  transition:background 160ms ease,color 160ms ease}
+#bbhp .fli svg{fill:currentColor;flex:none}
+#bbhp .fli:hover{background:var(--navy);color:#fff}
+@media(prefers-reduced-motion:reduce){#bbhp .fli{transition:none}}
+
+/* ============================ RESPONSIVE =========================== */
+@media(max-width:1024px){
+  #bbhp .stamp{display:none}
+}
+@media(max-width:860px){
+  #bbhp .egrid,#bbhp .mgrid,#bbhp .ggrid,#bbhp .cgrid{grid-template-columns:1fr}
+  #bbhp .pgrid{grid-template-columns:1fr 1fr}
+  #bbhp .fpanel{grid-template-columns:1fr}
+  #bbhp .fpic{min-height:0;aspect-ratio:16/10;border-right:none;border-bottom:1px solid var(--hair)}
+  #bbhp .fbody{padding:28px 26px}
+  #bbhp .pcell{border-bottom:1px solid var(--hair)}
+  #bbhp .pcell:nth-child(2n){border-right:none}
+  #bbhp .pcell:nth-child(n+3){border-bottom:none}
+  #bbhp .eng.g{border-right:none;border-bottom:1px solid var(--hair)}
+  #bbhp .mgrid{gap:36px}
+  #bbhp .dateline .row{grid-template-columns:repeat(2,1fr)}
+  #bbhp .dl:nth-child(2){border-right:none}
+  #bbhp .dl:nth-child(-n+2){border-bottom:1px solid var(--hair)}
+  #bbhp .igrid{grid-template-columns:repeat(3,1fr)}
+  #bbhp .igrid .icel:nth-child(-n+5){border-top:1px solid var(--hair)}
+  #bbhp .igrid .icel:nth-child(-n+3){border-top:none}
+  #bbhp .igrid .icel:nth-child(5n+1){border-left:1px solid var(--hair)}
+  #bbhp .igrid .icel:nth-child(3n+1){border-left:none}
+}
+@media(max-width:640px){
+  #bbhp .wrap,#bbhp .hero .inner,#bbhp .define .inner,#bbhp .engines .inner,#bbhp .index .inner,#bbhp .method .inner,#bbhp .guar .inner,#bbhp .faq .inner,#bbhp .contact .inner,#bbhp .compare .inner,#bbhp .press .inner,#bbhp .founder .inner{padding-left:22px;padding-right:22px}
+  #bbhp .pgrid{grid-template-columns:1fr}
+  #bbhp .pcell{border-right:none}
+  #bbhp .pcell:nth-child(n+3){border-bottom:1px solid var(--hair)}
+  #bbhp .pcell:last-child{border-bottom:none}
+  #bbhp .fpanel{padding:32px 26px}
+  #bbhp .hero .inner{padding-top:64px;padding-bottom:64px}
+  #bbhp .hero .bg{opacity:.26;background-position:center}
+  #bbhp .hero .ctas .btn{width:100%;text-align:center}
+  #bbhp .dateline{padding-top:32px}
+  #bbhp .igrid{grid-template-columns:repeat(2,1fr)}
+  #bbhp .igrid .icel:nth-child(-n+3){border-top:1px solid var(--hair)}
+  #bbhp .igrid .icel:nth-child(-n+2){border-top:none}
+  #bbhp .igrid .icel:nth-child(3n+1){border-left:1px solid var(--hair)}
+  #bbhp .igrid .icel:nth-child(2n+1){border-left:none}
+  #bbhp .faq .a{padding-left:4px}
+}
+</style>
+
+<div id="bbhp">
+
+  <!-- ================= HERO ================= -->
+  <!-- Header and footer are supplied by the WordPress theme; this
+       widget contains only the hero. -->
+  <section class="hero">
+    <div class="bg" role="img" aria-label="Editorial coverage secured through Baden Bower's guaranteed placement program"></div>
+    <div class="ov" aria-hidden="true"></div>
+    <div class="inner">
+      <div class="copy">
+        <div class="kick onnavy"><div class="thin"></div><span>Guaranteed PR <b>&middot;</b> Baden Bower</span></div>
+        <h1>Guaranteed Publicity in Forbes,&nbsp;Vogue, Entrepreneur &amp; more</h1>
+
+        <div class="ctas">
+          <a class="btn alt" href="#contact">Get in touch</a>
+          <a class="btn ghost" href="#outlets">See where we can publish you</a>
+        </div>
+      </div>
+    </div>
+    <div class="stamp" aria-hidden="true"><div class="in">Guaranteed<br>&middot;<br>Results</div></div>
+  </section>
+
+</div>
